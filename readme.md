@@ -8,7 +8,16 @@ https://github.com/joshdick/onedark.vim
 Looks best on terminals with TrueColor support. Best effort 256-color term alternative are provided
 as well.
 
-### Windows Terminal
+## Installation
+
+Use your plugin manager's prefered installation method. For VimPlug:
+
+```
+Plug 'audibleblink/hackthebox.vim'
+```
+or just copy `colors/hackthebox.vim` into `~/.vim/colors`
+
+## Windows Terminal
 
 If you'd like this colorscheme in Windows Terminal, paste this into your settings.json
 
