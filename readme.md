@@ -2,7 +2,8 @@
 
 ![](./img.png)
 
-Based on the hackthebox theme colors and the OneDark vim theme by
+Based on the [hackthebox theme
+colors](https://marketplace.visualstudio.com/items?itemName=silofy.hackthebox) and the OneDark vim theme by
 https://github.com/joshdick/onedark.vim
 
 Looks best on terminals with TrueColor support. Best effort 256-color term alternative are provided
