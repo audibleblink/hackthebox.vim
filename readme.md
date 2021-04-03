@@ -1,5 +1,8 @@
 # HackTheBox Vim Colorscheme
 
+
+![](./palette.png)
+
 ![](./img.png)
 
 Based on the [hackthebox theme
