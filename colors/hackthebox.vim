@@ -382,6 +382,12 @@ hi link GitGutterDelete SignifySignDelete
 " tpope/vim-fugitive
 call s:h("diffAdded", { "fg": s:green })
 call s:h("diffRemoved", { "fg": s:red })
+call s:h("diffChanged", { "fg": s:yellow })
+call s:h("diffOldFile", { "fg": s:dark_yellow })
+call s:h("diffNewFile", { "fg": s:cyan })
+call s:h("diffFile", { "fg": s:blue })
+call s:h("diffLine", { "fg": s:comment_grey })
+call s:h("diffIndexLine", { "fg": s:purple })
 
 " +------------------+
 " | Git Highlighting |
@@ -431,6 +437,9 @@ if has("nvim")
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
 
+  call s:h("healthError",{"fg": s:dark_red}) " Neovim ':checkhealth' error highlight
+  call s:h("healthWarning",{"fg": s:yellow}) " Neovim ':checkhealth' warning highlight
+  call s:h("healthSuccess",{"fg": s:green})   " Neovim ':checkhealth' success highlight
   " +--------------------+
   " | Nvim Lsp Reference |
   " +--------------------+
@@ -470,4 +479,11 @@ if has("nvim")
 
   call s:h("LspDiagnosticsHint",{"fg": s:green})
   call s:h("LspDiagnosticsVirtualTextHint",{"fg": s:green})
+
+  " +-----------+
+  " | Git signs |
+  " +-----------+
+  call s:h("GitSignsAdd" , { "fg" : s:green }) " -- diff mode: Added line |diff.txt|
+  call s:h("GitSignsChange" , { "fg" : s:yellow }) " -- diff mode: Changed line |diff.txt|
+  call s:h("GitSignsDelete" , { "fg" : s:red }) " -- diff mode: Deleted line |diff.txt|
 endif
