@@ -430,4 +430,44 @@ if has("nvim")
   let g:terminal_color_15 = s:comment_grey.gui
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
+
+  " +--------------------+
+  " | Nvim Lsp Reference |
+  " +--------------------+
+  call s:h("LspReferenceText",{"bg": s:visual_grey})  " Used for highlighting 'text' references
+  call s:h("LspReferenceRead",{"bg": s:visual_grey})  " Used for highlighting 'read' references
+  call s:h("LspReferenceWrite",{"bg": s:visual_grey}) " Used for highlighting 'write' references
+  call s:h("LspCodeLens",{"fg": s:comment_grey})
+  call s:h("LspSignatureActiveParameter",{"fg": s:dark_yellow})
+
+  " +---------------------+
+  " | Nvim Lsp Diagnostic |
+  " +---------------------+
+  call s:h("DiagnosticError",{"fg": s:dark_red}) " Used as the base highlight group. Other Diagnostic highlights link to this by default
+  call s:h("DiagnosticWarn",{"fg": s:yellow})    " Used as the base highlight group. Other Diagnostic highlights link to this by default
+  call s:h("DiagnosticInfo",{"fg": s:blue})      " Used as the base highlight group. Other Diagnostic highlights link to this by default
+  call s:h("DiagnosticHint",{"fg": s:cyan})      " Used as the base highlight group. Other Diagnostic highlights link to this by default
+
+  call s:h("DiagnosticUnderlineError" , { "style" : "undercurl", "sp" : s:red })   " Used to underline 'Error' diagnostics
+  call s:h("DiagnosticUnderlineWarn" , { "style" : "undercurl", "sp" : s:yellow }) " Used to underline 'Warning' diagnostics
+  call s:h("DiagnosticUnderlineInfo" , { "style" : "undercurl", "sp" : s:blue })   " Used to underline 'Information' diagnostics
+  call s:h("DiagnosticUnderlineHint" , { "style" : "undercurl", "sp" : s:cyan })   " Used to underline 'Hint' diagnostics
+
+  call s:h("DiagnosticVirtualTextError" , { "bg" : s:dark_red, "fg" : s:red })      " Used for 'Error' diagnostic virtual text
+  call s:h("DiagnosticVirtualTextWarn" , { "bg" : s:dark_yellow, "fg" : s:yellow }) " Used for 'Warning' diagnostic virtual text
+  call s:h("DiagnosticVirtualTextInfo" , { "bg" : s:blue, "fg" : s:blue })          " Used for 'Information' diagnostic virtual text
+  call s:h("DiagnosticVirtualTextHint" , { "bg" : s:cyan, "fg" : s:cyan })          " Used for 'Hint' diagnostic virtual text
+
+  " This is the old way of Lsp diagnostics highlights
+  call s:h("LspDiagnosticsVirtualTextError",{"fg": s:dark_red})
+  call s:h("LspDiagnosticsError",{"fg": s:dark_red})
+
+  call s:h("LspDiagnosticsWarning",{"fg": s:yellow})
+  call s:h("LspDiagnosticsVirtualTextWarning",{"fg": s:yellow})
+
+  call s:h("LspDiagnosticsInformation",{"fg": s:blue})
+  call s:h("LspDiagnosticsVirtualTextInformation",{"fg": s:blue})
+
+  call s:h("LspDiagnosticsHint",{"fg": s:green})
+  call s:h("LspDiagnosticsVirtualTextHint",{"fg": s:green})
 endif
