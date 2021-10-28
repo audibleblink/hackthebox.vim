@@ -483,7 +483,18 @@ if has("nvim")
   " +-----------+
   " | Git signs |
   " +-----------+
-  call s:h("GitSignsAdd" , { "fg" : s:green }) " -- diff mode: Added line |diff.txt|
+  call s:h("GitSignsAdd" , { "fg" : s:green })     " -- diff mode: Added line |diff.txt|
   call s:h("GitSignsChange" , { "fg" : s:yellow }) " -- diff mode: Changed line |diff.txt|
-  call s:h("GitSignsDelete" , { "fg" : s:red }) " -- diff mode: Deleted line |diff.txt|
+  call s:h("GitSignsDelete" , { "fg" : s:red })    " -- diff mode: Deleted line |diff.txt|
+
+  " +--------+
+  " | Neogit |
+  " +--------+
+  call s:h("NeogitBranch" , { "fg" : s:purple })
+  call s:h("NeogitRemote" , { "fg" : s:purple })
+  call s:h("NeogitHunkHeader" , { "bg" : s:black, "fg": s:purple})
+  call s:h("NeogitHunkHeaderHighlight" , { "bg" : s:gutter_fg_grey, "fg": s:cyan})
+  call s:h("NeogitDiffContextHighlight" , { "bg" : s:black, "fg": {"gui":"silver", "cterm":"07"}})
+  call s:h("NeogitDiffDeleteHighlight" , { "bg" : s:special_grey, "fg": s:red})
+  call s:h("NeogitDiffAddHighlight" , { "bg" : s:visual_grey, "fg":s:green})
 endif
