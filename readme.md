@@ -112,38 +112,39 @@ selection_foreground #ffffff
 ```
 
 ## Alacritty
-Adaptation of colorscheme for alacritty terminal. Paste this in your ~/.config/alacritty/alacritty.yml
+Adaptation of colorscheme for alacritty terminal. 
 ```yaml
-# Hack the Box
-colors:
-  # Default colors
-  primary:
-    background: '#1a2332'
-    foreground: '#a4b1cd'
+# alacritty.toml
 
-  selection:
-    text: '#ffffff'
-    background: '#313f55'
+[colors.primary]
+background = "#1a2332"
+foreground = "#a4b1cd"
 
-  # Normal colors
-  normal:
-    black:   '#000000'
-    red:     '#ff3e3e'
-    green:   '#9fef00'
-    yellow:  '#ffaf00'
-    blue:    '#004cff'
-    magenta: '#9f00ff'
-    cyan:    '#2ee7b6'
-    white:   '#ffffff'
+[colors.selection]
+text = "#ffffff"
+background = "#313f55"
 
-  # Bright colors
-  bright:
-    black:   '#666666'
-    red:     '#ff8484'
-    green:   '#c5f467'
-    yellow:  '#ffcc5c'
-    blue:    '#5cb2ff'
-    magenta: '#c16cfa'
-    cyan:    '#5cecc6'
-    white:   '#ffffff'
+[colors.cursor]
+text = '#eee9fc'
+cursor = '#eee9fc'
+
+[colors.normal]
+black = "#000000"
+red = "#ff3e3e"
+green = "#9fef00"
+yellow = "#ffaf00"
+blue = "#5cb2ff"
+magenta = "#9f00ff"
+cyan = "#2ee7b6"
+white = "#ffffff"
+
+[colors.bright]
+black = "#666666"
+red = "#ff8484"
+green = "#c5f467"
+yellow = "#ffcc5c"
+blue = "#5cb2ff"
+magenta = "#c16cfa"
+cyan = "#5cecc6"
+white = "#ffffff"
 ```
